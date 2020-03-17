@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+      
+         <meta http-equiv="X-UA-compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+          <title>stopwatch</title>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+        <!-- select this link for the google font-->
+        <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
+       <style>
+           body{
+               background: url(imagesstop/cold.jpg) center center fixed;
+               background-size:cover;
+               color:#fff;
+           }
+        #header
+           {
+               text-align: center;
+               font-size:7vw;/*vw will take thw size of the font according to the viewport 1% of the viewport size*/
+           }
+           /*lap*/
+           #lap
+           {
+               text-align: right;
+               font-size: 4vw;
+           }
+           .lap {
+               height: 50px;
+               border-bottom: 1px solid #fff;
+               margin: 15px; 
+}
+           .laptimetitle
+           {
+               font-size:1.5em;
+               float: left;
+           }
+           .laptime
+           {
+            font-size: 2em;
+               float: right;
+           }
+             /*time*/
+           #time
+           {
+               text-align: center;
+               font-size: 10vw;
+           }
+           /*buttons*/
+           #controlsContainer{
+               margin-top: 90px;
+               margin-bottom: 100px;
+           }
+           .control{
+               
+                   color:#fff;
+                   background-color: #363680;
+               height:10vw;
+               width:10vw;
+               border-radius: 100%;
+               text-align:center;
+               padding-top: 20% ;
+               font-size:2.5vw;
+               cursor: pointer;
+        /*top &bottom and left and right*/
+        }
+             .control:active{
+                 background-color: #fff;
+               color:#363680;
+            
+        }
+           #laps{
+               max-height:270px;
+               overflow-y: scroll;
+           }
+</style>  
+    </head>
+    
+    <body >
+        <!--title-->
+<div class="container-fluid">
+    <div id="header">stopwatch
+    </div>
+       
+        <!--lap time-->
+        <div id="lap">
+            <!--span for min sec sentisecond  --> <span id="lapminute">00</span>:<span id="lapsecond">00</span>:<span id="lapcentisecond">00</span>
+        </div>
+             <!--time-->
+        <div id="time">
+            <!--span for min sec sentisecond  --> <span id="timeminute">00</span>:<span id="timesecond">00</span>:<span id="timecentisecond">00</span>
+        </div>
+        <!--controls-->
+        <div class="row" id="controlsContainer">
+            <div class="col-xs-2 col-xs-offset-4"><!--apn ne 2 col use ki h jbki 4 col offset h aage wale ho gye 6-->
+                <div id="startButton" class="control">start</div>
+                                <div id="stopButton" class="control">stop</div>
+                                <div id="resumeButton" class="control">resume</div>
+                
+            </div>
+            
+                <div class="col-xs-2 "><!--for the lap site only 2 col are used not all-->
+                <div id="lapButton" class="control">lap</div>
+                                <div id="resetButton" class="control">reset</div>
+
+                
+            </div>
+
+        </div> </div>
+        <!--lap box & overflow property for scrlling-->
+        <div id="laps">
+            
+        </div>
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+        <script src="js/bootstrap.min.js"></script>
+        <script   src="stopwatch.js"></script>
+
+    
+    </body>
+   
+ 
+</html> 
